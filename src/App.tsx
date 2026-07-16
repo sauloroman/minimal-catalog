@@ -321,6 +321,88 @@ function App() {
               <strong>¿Deseas agregar control de accesos?</strong> El sistema de boletaje electrónico (códigos QR únicos, control de entrada y pases digitales) está disponible por solo <strong>$10 MXN adicionales por persona/invitado</strong>.
             </div>
           </div>
+
+          {/* How it is delivered & Plus benefits section (New) */}
+          <section className="delivery-section">
+            <h2 className="delivery-title">Cómo recibe la invitación tu invitado</h2>
+            <div className="delivery-grid">
+              {/* Left Side: WhatsApp Mockup */}
+              <div className="whatsapp-mockup">
+                <div className="whatsapp-bubble">
+                  {/* Link preview card */}
+                  <div className="whatsapp-link-preview">
+                    <img 
+                      src={img6} 
+                      alt="Vista previa de portada" 
+                      className="whatsapp-preview-img" 
+                    />
+                    <div className="whatsapp-preview-info">
+                      <div className="whatsapp-preview-title">Cecati #173 - Enfermería</div>
+                      <div className="whatsapp-preview-domain">cecati173-enfermeria-graduacion.netlify.app</div>
+                    </div>
+                  </div>
+                  
+                  {/* WhatsApp text content */}
+                  <div className="whatsapp-text">
+                    Hola Ana Patricia Barcenas Castillo.{"\n"}
+                    El equipo de EventCreations te saluda cordialmente. Queremos mandarte tu invitación web para tu próximo evento el 2026-07-10. Compártela únicamente con tus invitados y reserva tu esperada fecha.{"\n\n"}
+                    Invitación web:{"\n"}
+                    <a href="https://cecati173-enfermeria-graduacion.netlify.app/?v=3" target="_blank" rel="noopener noreferrer">
+                      https://cecati173-enfermeria-graduacion.netlify.app/?v=3
+                    </a>{"\n"}
+                    Clave de acceso: <strong>26TgX</strong>{"\n\n"}
+                    Nota: No compartas esta clave con nadie más pues tus boletos electrónicos pueden ser clonados. Presenta tus boletos el día de tu evento y listo.
+                  </div>
+                  <div className="whatsapp-time">
+                    9:38 p.m. ✓✓
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side: Benefits / Plus list */}
+              <div className="benefits-list">
+                <div className="benefit-card">
+                  <div className="benefit-icon-box" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>01</div>
+                  <div className="benefit-content">
+                    <h3 className="benefit-title">Enlace Web Personalizado</h3>
+                    <p className="benefit-desc">
+                      Tus invitados reciben un link único que abre directamente su invitación digital interactiva sin necesidad de instalar ninguna aplicación.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="benefit-card">
+                  <div className="benefit-icon-box" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>02</div>
+                  <div className="benefit-content">
+                    <h3 className="benefit-title">Previsualización de Portada</h3>
+                    <p className="benefit-desc">
+                      Al compartir el enlace por WhatsApp, se genera automáticamente una tarjeta de previsualización con la imagen de portada y el título personalizado de tu evento.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="benefit-card">
+                  <div className="benefit-icon-box" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>03</div>
+                  <div className="benefit-content">
+                    <h3 className="benefit-title">Actualizaciones en Tiempo Real</h3>
+                    <p className="benefit-desc">
+                      ¿Cambió el horario o la mesa de regalos? Corrige cualquier detalle al instante y sin costo. El enlace siempre mostrará la información más reciente.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="benefit-card">
+                  <div className="benefit-icon-box" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>04</div>
+                  <div className="benefit-content">
+                    <h3 className="benefit-title">Confirmación de Asistencia Eficiente</h3>
+                    <p className="benefit-desc">
+                      Los invitados confirman directamente en la web y los datos se envían de inmediato a tu WhatsApp, permitiéndote llevar el control de tu lista sin esfuerzo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           </>
         ) : (
           <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--brown-medium)' }}>
