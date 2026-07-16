@@ -6,7 +6,7 @@
   --wine-light: #B85062;
   --wine-pastel: #F9F1F3;
   --wine-pastel-border: #EEDEE2;
-  
+
   --brown-dark: #3E312E;
   --brown-medium: #6E5C56;
   --brown-subtle: #FAF6F2;
@@ -32,7 +32,9 @@
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -40,7 +42,7 @@ body {
   margin: 0;
   font-family: var(--font-primary);
   background-color: var(--brown-subtle);
-  background-image: 
+  background-image:
     radial-gradient(var(--wine-pastel) 1px, transparent 1px),
     radial-gradient(var(--wine-pastel) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -51,7 +53,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-secondary);
   color: var(--wine-dark);
   margin: 0;
@@ -189,7 +196,7 @@ a {
 .hero-description {
   max-width: 600px;
   margin: 0 auto 30px;
-  font-size: 1.1rem;
+  font-size: .8rem;
   color: var(--brown-medium);
   line-height: 1.6;
   font-family: var(--font-secondary);
@@ -276,7 +283,7 @@ a {
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 60px;
 }
 
@@ -299,11 +306,10 @@ a {
   border-color: var(--wine-light);
 }
 
-/* Image Wrapper (Phone Mockup style display) */
+/* Image Wrapper (Displays entire image) */
 .card-image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
   overflow: hidden;
   background-color: var(--brown-subtle);
   cursor: pointer;
@@ -311,9 +317,8 @@ a {
 
 .card-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  display: block;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -395,11 +400,11 @@ a {
 
 /* Card Content Details */
 .card-content {
-  padding: 16px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 10px;
+  gap: 8px;
 }
 
 .card-header-info {
@@ -419,69 +424,58 @@ a {
 /* Prices styling */
 .price-container {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
   margin-top: 4px;
 }
 
 .price-original {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: var(--brown-medium);
   text-decoration: line-through;
   font-weight: 400;
 }
 
 .price-current {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--wine-medium);
 }
 
 .price-discount-tag {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   background-color: #E6F4EA;
   color: #137333;
   padding: 2px 6px;
   border-radius: 4px;
-  margin-left: auto;
 }
 
-/* Ticket/Boleto mini badge */
-.ticket-feature {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background-color: var(--brown-subtle);
-  border: 1px solid var(--brown-light-border);
-  padding: 8px 10px;
-  border-radius: 8px;
-  font-size: 0.76rem;
-  color: var(--brown-medium);
-  line-height: 1.3;
-}
-
-.ticket-icon {
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-.ticket-feature strong {
-  color: var(--wine-dark);
-}
-
-/* Access / Code info */
-.code-info {
-  font-size: 0.75rem;
+/* Access / Code info row */
+.code-info-row {
+  font-size: 0.74rem;
   color: var(--wine-medium);
   background-color: var(--wine-pastel);
   border: 1px dashed var(--wine-pastel-border);
-  padding: 6px 10px;
+  padding: 4px 8px;
   border-radius: 6px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 4px;
   font-weight: 600;
+  width: max-content;
+  max-width: 100%;
+}
+
+/* Footer note at the bottom of the card */
+.card-footer-note {
+  font-size: 0.72rem;
+  color: var(--brown-medium);
+  text-align: center;
+  margin: 4px 0 0;
+  font-weight: 500;
+  opacity: 0.85;
 }
 
 /* Action button for live demo */
@@ -540,7 +534,8 @@ a {
   background-color: var(--white);
   border-radius: 24px;
   width: 100%;
-  max-width: 440px; /* Perfect size for cellphone mockups */
+  max-width: 440px;
+  /* Perfect size for cellphone mockups */
   max-height: 90vh;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -629,11 +624,13 @@ a {
   color: #8C3544;
   border-color: #F0D5DB;
 }
+
 .modal-badge.xv {
   background-color: #FAF4F8;
   color: #A34E84;
   border-color: #F2D5E7;
 }
+
 .modal-badge.graduacion {
   background-color: #F6F7F2;
   color: #5D6B3E;
@@ -709,8 +706,13 @@ a {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
@@ -718,6 +720,7 @@ a {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -725,18 +728,27 @@ a {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Desktop Grid and Responsiveness (4 columns for desktop) */
+
 @media (min-width: 768px) {
   .catalog-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  
+
   .hero-title {
     font-size: 3.2rem;
   }
@@ -747,8 +759,46 @@ a {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
-  
+
   .card-title {
     font-size: 1.05rem;
+  }
+}
+
+/* Mobile Header & Layout adjustments to prevent overlaps */
+@media (max-width: 600px) {
+  .app-header {
+    padding: 10px 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .brand {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .brand-logo {
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
+  .brand-name span {
+    font-size: 1.45rem;
+  }
+
+  .header-nav {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
   }
 }

@@ -139,8 +139,8 @@ function App() {
   // Filter invitations based on category and search query
   const filteredInvitations = INVITATIONS.filter((inv) => {
     const matchesCategory = selectedCategory === 'Todas' || inv.category === selectedCategory;
-    const matchesSearch = inv.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          inv.category.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = inv.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      inv.category.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -155,7 +155,7 @@ function App() {
     setSelectedInvitation(filteredInvitations[nextIndex]);
   };
 
-  const activeModalIndex = selectedInvitation 
+  const activeModalIndex = selectedInvitation
     ? filteredInvitations.findIndex((inv) => inv.id === selectedInvitation.id)
     : -1;
 
@@ -170,10 +170,10 @@ function App() {
           </div>
           <nav className="header-nav">
             <a href="#catalogo" className="nav-link">Catálogo</a>
-            <a 
-              href="https://wa.me/?text=Hola!%20Me%20interesa%20adquirir%20una%20invitación%20digital." 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://wa.me/?text=Hola!%20Me%20interesa%20adquirir%20una%20invitación%20digital."
+              target="_blank"
+              rel="noopener noreferrer"
               className="nav-link"
               style={{ color: 'var(--wine-medium)', fontWeight: 'bold' }}
             >
@@ -192,19 +192,13 @@ function App() {
             Catálogo exclusivo de invitaciones digitales e interactivas. Diseños modernos optimizados para móviles, con confirmación directa, mapas, galerías y sistemas inteligentes.
           </p>
 
-          {/* Ticket Information Banner */}
-          <div className="info-banner">
-            <div className="info-banner-icon">🎟️</div>
-            <div className="info-banner-text">
-              <strong>¿Deseas agregar control de accesos?</strong> El sistema de boletaje electrónico (códigos QR únicos, control de entrada y pases digitales) está disponible por solo <strong>$10 MXN adicionales por persona/invitado</strong>.
-            </div>
-          </div>
+
 
           {/* Search bar inside hero */}
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
-            <input 
-              type="text" 
-              placeholder="Buscar invitación... (ej. Poppy, Cosmic)" 
+            <input
+              type="text"
+              placeholder="Buscar invitación... (ej. Poppy, Cosmic)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               style={{
@@ -248,7 +242,8 @@ function App() {
 
         {/* Catalog Grid: 2 columns mobile-first, 4 columns desktop */}
         {filteredInvitations.length > 0 ? (
-          <div className="catalog-grid">
+          <>
+            <div className="catalog-grid">
             {filteredInvitations.map((inv) => (
               <article key={inv.id} className="invitation-card">
                 {/* Badge specifying the category */}
@@ -257,20 +252,20 @@ function App() {
                 </div>
 
                 {/* Card Image Wrapper */}
-                <div 
+                <div
                   className="card-image-wrapper"
                   onClick={() => setSelectedInvitation(inv)}
                   title="Haz clic para ampliar vista"
                 >
-                  <img 
-                    src={inv.image} 
-                    alt={`Mockup de ${inv.title}`} 
-                    className="card-image" 
+                  <img
+                    src={inv.image}
+                    alt={`Mockup de ${inv.title}`}
+                    className="card-image"
                     loading="lazy"
                   />
                   <div className="card-image-overlay">
                     <div className="zoom-hint">
-                      <span>🔍</span> Ampliar Diseño
+                      Ampliar Diseño
                     </div>
                   </div>
                 </div>
@@ -279,51 +274,59 @@ function App() {
                 <div className="card-content">
                   <div className="card-header-info">
                     <h2 className="card-title">{inv.title}</h2>
-                    
-                    {/* Price structure: before 2000, now 1500 */}
-                    <div className="price-container">
-                      <span className="price-original">${inv.originalPrice}</span>
-                      <span className="price-current">${inv.price} MXN</span>
-                      <span className="price-discount-tag">-25%</span>
-                    </div>
-                  </div>
 
-                  {/* Boleto electronic notice */}
-                  <div className="ticket-feature">
-                    <span className="ticket-icon">🎟️</span>
-                    <span>Boletaje digital disponible: <strong>+$10/persona</strong></span>
+                    {/* Price structure: stacked to avoid horizontal wrapping */}
+                    <div className="price-container">
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                        <span className="price-current">${inv.price} MXN</span>
+                        <span className="price-discount-tag">-25%</span>
+                      </div>
+                      <span className="price-original">Antes: ${inv.originalPrice}</span>
+                    </div>
                   </div>
 
                   {/* Code demo credentials helper (if needed) */}
                   {inv.code && (
-                    <div className="code-info">
-                      <span>🔑</span>
-                      <span>Código para demo: <strong>{inv.code}</strong></span>
+                    <div className="code-info-row">
+                      <span>Ingresa: <strong>{inv.code}</strong></span>
                     </div>
                   )}
 
                   {/* Action redirect button */}
-                  <a 
-                    href={inv.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={inv.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="demo-btn"
                   >
-                    <span>Ver Demo en Vivo</span>
+                    <span>Ver Demo</span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="7" y1="17" x2="17" y2="7"></line>
                       <polyline points="7 7 17 7 17 17"></polyline>
                     </svg>
                   </a>
+
+                  {/* Boleto electronic notice - moved to the very bottom */}
+                  <p className="card-footer-note">
+                    * Boletaje digital: +$10/persona
+                  </p>
                 </div>
               </article>
             ))}
           </div>
+
+          {/* Ticket Information Banner (Moved below the grid) */}
+          <div className="info-banner" style={{ marginTop: '40px' }}>
+            <div className="info-banner-text" style={{ textAlign: 'center', width: '100%' }}>
+              <strong>¿Deseas agregar control de accesos?</strong> El sistema de boletaje electrónico (códigos QR únicos, control de entrada y pases digitales) está disponible por solo <strong>$10 MXN adicionales por persona/invitado</strong>.
+            </div>
+          </div>
+          </>
         ) : (
           <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--brown-medium)' }}>
             <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>No se encontraron invitaciones que coincidan con tu búsqueda.</p>
-            <button 
-              className="demo-btn" 
+            <button
+              className="demo-btn"
               style={{ margin: '20px auto 0', display: 'block' }}
               onClick={() => { setSelectedCategory('Todas'); setSearchQuery(''); }}
             >
@@ -335,16 +338,16 @@ function App() {
 
       {/* Interactive Zoom Modal */}
       {selectedInvitation && (
-        <div 
+        <div
           className="modal-overlay"
           onClick={() => setSelectedInvitation(null)}
         >
-          <div 
+          <div
             className="modal-container"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
-            <button 
+            <button
               className="modal-close-btn"
               onClick={() => setSelectedInvitation(null)}
               aria-label="Cerrar modal"
@@ -410,9 +413,9 @@ function App() {
 
             {/* Modal Scrollable Image wrapper */}
             <div className="modal-image-wrapper">
-              <img 
-                src={selectedInvitation.image} 
-                alt={`Previsualización completa de ${selectedInvitation.title}`} 
+              <img
+                src={selectedInvitation.image}
+                alt={`Previsualización completa de ${selectedInvitation.title}`}
                 className="modal-image"
               />
             </div>
@@ -438,21 +441,19 @@ function App() {
               {/* Password credentials helper if applicable */}
               {selectedInvitation.code && (
                 <div className="code-info" style={{ margin: '4px 0' }}>
-                  <span>🔑</span>
                   <span>Este demo requiere contraseña para ingresar: <strong>{selectedInvitation.code}</strong></span>
                 </div>
               )}
 
               {/* Ticket system notification */}
               <div className="ticket-feature">
-                <span className="ticket-icon">🎟️</span>
                 <span>Sistema de boletaje digital opcional por solo <strong>$10 MXN</strong> por invitado.</span>
               </div>
 
-              <a 
-                href={selectedInvitation.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={selectedInvitation.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="demo-btn"
                 style={{ marginTop: '5px' }}
               >
