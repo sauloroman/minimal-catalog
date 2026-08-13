@@ -226,7 +226,7 @@ function App() {
                 border: '1px solid var(--brown-light-border)',
                 backgroundColor: 'var(--white)',
                 fontFamily: 'var(--font-primary)',
-                fontSize: '0.92rem',
+                fontSize: '1.45rem',
                 outline: 'none',
                 boxShadow: 'var(--shadow-sm)',
                 transition: 'all 0.3s ease'
@@ -395,7 +395,7 @@ function App() {
                 {/* Right Side: Benefits / Plus list */}
                 <div className="benefits-list">
                   <div className="benefit-card">
-                    <div className="benefit-icon-box" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>01</div>
+                    <div className="benefit-icon-box" style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>01</div>
                     <div className="benefit-content">
                       <h3 className="benefit-title">Enlace Web Personalizado</h3>
                       <p className="benefit-desc">
@@ -405,7 +405,7 @@ function App() {
                   </div>
 
                   <div className="benefit-card">
-                    <div className="benefit-icon-box" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>02</div>
+                    <div className="benefit-icon-box" style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>02</div>
                     <div className="benefit-content">
                       <h3 className="benefit-title">Previsualización de Portada</h3>
                       <p className="benefit-desc">
@@ -415,7 +415,7 @@ function App() {
                   </div>
 
                   <div className="benefit-card">
-                    <div className="benefit-icon-box" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>03</div>
+                    <div className="benefit-icon-box" style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>03</div>
                     <div className="benefit-content">
                       <h3 className="benefit-title">Actualizaciones en Tiempo Real</h3>
                       <p className="benefit-desc">
@@ -425,7 +425,7 @@ function App() {
                   </div>
 
                   <div className="benefit-card">
-                    <div className="benefit-icon-box" style={{ fontSize: '0.9rem', fontWeight: 'bold' }}>04</div>
+                    <div className="benefit-icon-box" style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>04</div>
                     <div className="benefit-content">
                       <h3 className="benefit-title">Confirmación de Asistencia Eficiente</h3>
                       <p className="benefit-desc">
@@ -439,7 +439,7 @@ function App() {
           </>
         ) : (
           <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--brown-medium)' }}>
-            <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>No se encontraron invitaciones que coincidan con tu búsqueda.</p>
+            <p style={{ fontSize: '1.6rem', fontWeight: 600 }}>No se encontraron invitaciones que coincidan con tu búsqueda.</p>
             <button
               className="demo-btn"
               style={{ margin: '20px auto 0', display: 'block' }}
@@ -490,7 +490,7 @@ function App() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '1.2rem',
+                    fontSize: '1.8rem',
                     color: 'var(--wine-dark)',
                     boxShadow: 'var(--shadow-sm)'
                   }}
@@ -515,7 +515,7 @@ function App() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '1.2rem',
+                    fontSize: '1.8rem',
                     color: 'var(--wine-dark)',
                     boxShadow: 'var(--shadow-sm)'
                   }}

@@ -38,9 +38,16 @@
   box-sizing: inherit;
 }
 
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
 body {
+  overflow-x: hidden;
   margin: 0;
   font-family: var(--font-primary);
+  font-size: 1.6rem;
   background-color: var(--brown-subtle);
   background-image:
     radial-gradient(var(--wine-pastel) 1px, transparent 1px),
@@ -122,7 +129,7 @@ a {
 .brand-name {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: var(--wine-dark);
   letter-spacing: -0.5px;
 }
@@ -131,7 +138,7 @@ a {
   color: var(--wine-medium);
   font-weight: 300;
   font-family: var(--font-title);
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   margin-left: 2px;
 }
 
@@ -142,7 +149,7 @@ a {
 }
 
 .nav-link {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--brown-medium);
   transition: color 0.2s ease;
@@ -178,14 +185,14 @@ a {
 
 .hero-tag {
   font-family: var(--font-title);
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   color: var(--wine-medium);
   margin-bottom: 10px;
   display: block;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 3.6rem;
   font-weight: 900;
   letter-spacing: -1px;
   color: var(--wine-dark);
@@ -196,7 +203,7 @@ a {
 .hero-description {
   max-width: 600px;
   margin: 0 auto 30px;
-  font-size: .8rem;
+  font-size: 1.45rem;
   color: var(--brown-medium);
   line-height: 1.6;
   font-family: var(--font-secondary);
@@ -219,7 +226,7 @@ a {
 }
 
 .info-banner-icon {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,7 +235,7 @@ a {
 }
 
 .info-banner-text {
-  font-size: 0.92rem;
+  font-size: 1.45rem;
   line-height: 1.5;
   color: var(--wine-dark);
 }
@@ -255,7 +262,7 @@ a {
   padding: 10px 22px;
   border-radius: 30px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-sm);
@@ -349,7 +356,7 @@ a {
 .zoom-hint {
   background-color: rgba(255, 255, 255, 0.9);
   color: var(--wine-dark);
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   font-weight: 700;
   padding: 6px 12px;
   border-radius: 20px;
@@ -369,7 +376,7 @@ a {
   -webkit-backdrop-filter: blur(4px);
   color: var(--wine-dark);
   font-weight: 700;
-  font-size: 0.72rem;
+  font-size: 1.15rem;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   padding: 5px 12px;
@@ -415,7 +422,7 @@ a {
 
 .card-title {
   font-family: var(--font-secondary);
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--brown-dark);
   line-height: 1.3;
@@ -431,20 +438,20 @@ a {
 }
 
 .price-original {
-  font-size: 0.78rem;
+  font-size: 1.25rem;
   color: var(--brown-medium);
   text-decoration: line-through;
   font-weight: 400;
 }
 
 .price-current {
-  font-size: 1.05rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--wine-medium);
 }
 
 .price-discount-tag {
-  font-size: 0.68rem;
+  font-size: 1.15rem;
   font-weight: 700;
   background-color: #E6F4EA;
   color: #137333;
@@ -454,7 +461,7 @@ a {
 
 /* Access / Code info row */
 .code-info-row {
-  font-size: 0.74rem;
+  font-size: 1.25rem;
   color: var(--wine-medium);
   background-color: var(--wine-pastel);
   border: 1px dashed var(--wine-pastel-border);
@@ -470,7 +477,7 @@ a {
 
 /* Footer note at the bottom of the card */
 .card-footer-note {
-  font-size: 0.72rem;
+  font-size: 1.15rem;
   color: var(--brown-medium);
   text-align: center;
   margin: 4px 0 0;
@@ -486,7 +493,7 @@ a {
   padding: 10px 14px;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -529,7 +536,7 @@ a {
   padding: 9px 10px;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 1.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -554,7 +561,7 @@ a {
   padding: 9px 10px;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 0.84rem;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -625,7 +632,7 @@ a {
   justify-content: center;
   cursor: pointer;
   z-index: 20;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   color: var(--brown-dark);
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
@@ -669,13 +676,13 @@ a {
 }
 
 .modal-title {
-  font-size: 1.25rem;
+  font-size: 1.9rem;
   font-weight: 800;
   color: var(--wine-dark);
 }
 
 .modal-badge {
-  font-size: 0.7rem;
+  font-size: 1.15rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -709,19 +716,19 @@ a {
 }
 
 .modal-price-original {
-  font-size: 0.9rem;
+  font-size: 1.35rem;
   color: var(--brown-medium);
   text-decoration: line-through;
 }
 
 .modal-price-current {
-  font-size: 1.4rem;
+  font-size: 2.1rem;
   font-weight: 800;
   color: var(--wine-medium);
 }
 
 .modal-info-text {
-  font-size: 0.85rem;
+  font-size: 1.4rem;
   color: var(--brown-medium);
   line-height: 1.5;
 }
@@ -745,13 +752,13 @@ a {
 .footer-brand {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-bottom: 5px;
 }
 
 .footer-tagline {
   font-family: var(--font-title);
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   color: var(--wine-pastel-border);
   margin-bottom: 20px;
 }
@@ -764,7 +771,7 @@ a {
 }
 
 .footer-copyright {
-  font-size: 0.8rem;
+  font-size: 1.25rem;
   color: var(--wine-pastel-border);
   opacity: 0.7;
 }
@@ -815,7 +822,7 @@ a {
   }
 
   .hero-title {
-    font-size: 3.2rem;
+    font-size: 4.8rem;
   }
 }
 
@@ -826,7 +833,7 @@ a {
   }
 
   .card-title {
-    font-size: 1.05rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -852,11 +859,11 @@ a {
   }
 
   .brand-name {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
   }
 
   .brand-name span {
-    font-size: 1.45rem;
+    font-size: 1.6rem;
   }
 
   .header-nav {
@@ -865,6 +872,18 @@ a {
 
   .nav-link {
     font-size: 0.85rem;
+  }
+
+  /* Stack card and modal action buttons on mobile */
+  .card-actions,
+  .modal-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .demo-btn-outline,
+  .buy-btn {
+    width: 100%;
   }
 }
 
@@ -883,7 +902,7 @@ a {
   text-align: center;
   font-family: var(--font-secondary);
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   color: var(--wine-dark);
   margin-bottom: 30px;
 }
@@ -920,7 +939,7 @@ a {
   border-radius: 8px;
   padding: 8px 10px;
   box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
-  font-size: 0.82rem;
+  font-size: 1.35rem;
   color: #111b21;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.4;
@@ -952,12 +971,12 @@ a {
 
 .whatsapp-preview-title {
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 1.4rem;
   margin-bottom: 2px;
 }
 
 .whatsapp-preview-domain {
-  font-size: 0.72rem;
+  font-size: 1.15rem;
   opacity: 0.85;
 }
 
@@ -977,7 +996,7 @@ a {
 
 .whatsapp-time {
   text-align: right;
-  font-size: 0.65rem;
+  font-size: 1.1rem;
   color: #667781;
   margin-top: 4px;
 }
@@ -998,7 +1017,7 @@ a {
 .benefit-icon-box {
   background-color: var(--wine-pastel);
   color: var(--wine-medium);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 10px;
   border-radius: 12px;
   border: 1px solid var(--wine-pastel-border);
@@ -1019,12 +1038,12 @@ a {
 .benefit-title {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1.6rem;
   color: var(--wine-dark);
 }
 
 .benefit-desc {
-  font-size: 0.86rem;
+  font-size: 1.4rem;
   color: var(--brown-medium);
   line-height: 1.5;
 }
