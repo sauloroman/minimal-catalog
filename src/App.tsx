@@ -10,6 +10,7 @@ import img5 from './assets/images/5.png';
 import img6 from './assets/images/6.png';
 import img7 from './assets/images/7.png';
 import img8 from './assets/images/8.png';
+import img9 from './assets/images/9.png';
 
 interface Invitation {
   id: string;
@@ -25,6 +26,17 @@ interface Invitation {
 }
 
 const INVITATIONS: Invitation[] = [
+  {
+    id: 'xv-grethel',
+    title: 'Grethel Stefania',
+    category: 'XV Años',
+    categoryKey: 'xv',
+    originalPrice: 2000,
+    price: 1500,
+    url: 'https://my-dream-invitation-xv.netlify.app/',
+    image: img9,
+    ticketSystemPrice: 10
+  },
   {
     id: 'xv-yellow',
     title: 'Yellow Inspiration',
