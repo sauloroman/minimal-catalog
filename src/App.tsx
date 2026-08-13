@@ -11,6 +11,7 @@ import img6 from './assets/images/6.png';
 import img7 from './assets/images/7.png';
 import img8 from './assets/images/8.png';
 import img9 from './assets/images/9.png';
+import img10 from './assets/images/10.png';
 
 interface Invitation {
   id: string;
@@ -26,6 +27,17 @@ interface Invitation {
 }
 
 const INVITATIONS: Invitation[] = [
+  {
+    id: 'grad-dinner',
+    title: 'Dinner Time',
+    category: 'Graduación',
+    categoryKey: 'graduacion',
+    originalPrice: 2000,
+    price: 1500,
+    url: 'https://dinner-time-invitation-graduation.netlify.app/',
+    image: img10,
+    ticketSystemPrice: 10
+  },
   {
     id: 'xv-grethel',
     title: 'Grethel Stefania',
