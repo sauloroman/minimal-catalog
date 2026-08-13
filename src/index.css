@@ -512,6 +512,71 @@ a {
   transform: translateX(3px);
 }
 
+/* Card & Modal Actions row */
+.card-actions,
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.demo-btn-outline {
+  background-color: transparent;
+  color: var(--wine-medium);
+  border: 1.5px solid var(--wine-medium);
+  text-align: center;
+  padding: 9px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  flex: 1;
+}
+
+.demo-btn-outline:hover {
+  background-color: var(--wine-pastel);
+  border-color: var(--wine-dark);
+  color: var(--wine-dark);
+}
+
+.buy-btn {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: none;
+  text-align: center;
+  padding: 9px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.84rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+  flex: 1.2;
+}
+
+.buy-btn:hover {
+  background-color: #20BA5A;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  color: #FFFFFF;
+}
+
+.buy-btn svg {
+  flex-shrink: 0;
+}
+
 /* Modal for image zoom */
 .modal-overlay {
   position: fixed;
